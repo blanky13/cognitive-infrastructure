@@ -16,7 +16,7 @@ This does **not** require assuming a universal number of working-memory slots.
 
 ## Attention and control
 
-Attention determines what receives processing priority. Interruptions, notifications, competing thoughts, and environmental cues can all compete for limited control.
+Attention determines what receives processing priority. Interruptions, notifications, competing thoughts, and environmental cues can compete for limited control.
 
 The system therefore treats attention as a routing problem:
 
@@ -37,41 +37,22 @@ The important distinction is:
 
 ## Interruptions and context restoration
 
-An interruption can leave the original task in a partially specified state. If the next action, open questions, or relevant resources are no longer obvious, resumption requires reconstruction.
+An interruption can leave the original task partially specified. If the next action, open questions, or relevant resources are no longer obvious, resumption requires reconstruction.
 
 The system addresses this with checkpointing.
 
-A useful checkpoint records:
-
-- objective;
-- current state;
-- last completed action;
-- next physical action;
-- blockers and open questions;
-- relevant files or links;
-- important decisions.
+A useful checkpoint records the objective, current state, last completed action, next physical action, blockers, open questions, resources, and important decisions.
 
 ## ADHD-informed design
 
 ADHD can involve difficulties with attention regulation, inhibition, working memory, planning, time management, and task initiation, but presentation varies substantially between people.
 
-This project therefore does not treat ADHD as a single cognitive architecture or reduce it to an “interest/dopamine priority queue.” Instead, ADHD is treated as an important design case for systems that:
-
-- reduce initiation friction;
-- make future intentions visible;
-- preserve state across interruptions;
-- reduce unnecessary context switching;
-- support recovery after disrupted routines.
+This project therefore does not treat ADHD as a single cognitive architecture or reduce it to an “interest/dopamine priority queue.” ADHD is treated as an important design case for systems that reduce initiation friction, preserve state across interruptions, reduce unnecessary context switching, and support recovery after disrupted routines.
 
 ## Analogy ≠ mechanism
 
 A systems analogy can be useful without being scientifically equivalent.
 
-For example:
+A cache analogy illustrates volatile active state; a queue illustrates deferred work; checkpointing illustrates resumability; rate limiting illustrates interrupt control.
 
-- a cache analogy illustrates volatile active state;
-- a queue analogy illustrates deferred work;
-- checkpointing illustrates resumability;
-- rate limiting illustrates interrupt control.
-
-These analogies are design tools, not claims that the corresponding AWS service or software mechanism exists inside the brain.
+These are design tools, not claims that corresponding AWS services or software mechanisms exist inside the brain.
