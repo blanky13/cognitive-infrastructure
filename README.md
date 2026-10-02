@@ -2,13 +2,11 @@
 
 A practical framework for externalizing cognitive state, reducing working-memory load, preserving context, and recovering from interruptions.
 
-The project uses distributed-systems concepts as **design metaphors** for building a personal system that is easier to capture into, easier to resume, and harder to lose state from. It is ADHD-informed, but is intended to be useful wherever attention, working memory, interruptions, or task initiation create friction.
+The project uses distributed-systems concepts as **design metaphors** for building a personal system that is easier to capture into, easier to resume, and harder to lose state from. It is ADHD-informed, but intended to be useful wherever attention, working memory, interruptions, or task initiation create friction.
 
 ## Core idea
 
 Do not rely on active cognition to hold everything required for future action.
-
-Instead:
 
 **capture → persist → clarify → route → execute → checkpoint → recover → review**
 
@@ -36,13 +34,13 @@ flowchart TD
 
 ## Design principles
 
-1. **Externalize state** — move information out of the active cognitive workspace when it does not need to remain there.
-2. **Capture before organizing** — the capture path should be faster than the thought can become a competing task.
-3. **Persist before processing** — captured information should be safe before it is cleaned up or classified.
-4. **Keep active work small** — limit simultaneous execution rather than assuming a fixed biological number of cognitive slots.
-5. **Make resumption explicit** — every interruptible task should be recoverable from a compact context packet.
-6. **Park, do not suppress** — competing ideas go to a reviewable parking lot rather than becoming active work.
-7. **Design for recovery** — missed days, interruptions, and stale tasks are normal operating conditions.
+1. **Externalize state** — move nonessential information out of the active cognitive workspace.
+2. **Capture before organizing** — capture should be faster than organization.
+3. **Persist before processing** — preserve information before cleaning or classifying it.
+4. **Keep active work small** — limit simultaneous execution rather than assuming a fixed biological slot count.
+5. **Make resumption explicit** — use a compact context packet.
+6. **Park, do not suppress** — defer competing ideas into a reviewable location.
+7. **Design for recovery** — interruptions and disrupted routines are normal conditions.
 8. **Keep the infrastructure cheap** — the system must not become another project to maintain.
 
 ## Repository
