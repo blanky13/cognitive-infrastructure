@@ -1,11 +1,9 @@
 # System Workflows and Patterns
 
 ## Pattern 1: Quick capture
-
 **Problem:** A thought competes with the current task because it has not been recorded.
 
 **Procedure:**
-
 1. Capture the raw thought in the fastest available channel.
 2. Do not require full metadata.
 3. Return to the active task.
@@ -14,10 +12,7 @@
 **Goal:** preserve information without turning capture into another task.
 
 ## Pattern 2: Context checkpoint
-
 **Problem:** An interruption makes the original task expensive to reconstruct.
-
-**Checkpoint:**
 
 ```text
 Project:
@@ -34,23 +29,16 @@ Important decisions:
 Write the smallest useful version.
 
 ## Pattern 3: Interruption recovery
-
-When returning to interrupted work:
-
 1. Read the checkpoint.
 2. Confirm the objective.
 3. Perform the recorded next action.
-4. Update the checkpoint if the state has changed.
+4. Update the checkpoint if state changed.
 5. Resume normal execution.
 
-Do not rebuild the entire project history unless it is actually required.
+Do not rebuild the entire project history unless required.
 
 ## Pattern 4: Task-paralysis recovery
-
-**Problem:** The current task has become too ambiguous, large, or effortful to initiate.
-
-Switch modes rather than repeatedly forcing the same execution path:
-
+When the task becomes too ambiguous, large, or effortful to initiate:
 1. State the desired outcome.
 2. Remove unnecessary choices.
 3. Define the smallest observable next action.
@@ -61,9 +49,6 @@ Switch modes rather than repeatedly forcing the same execution path:
 The system does not depend on a universal “two-minute” or “three-minute” threshold.
 
 ## Pattern 5: Distraction parking
-
-When a competing idea appears:
-
 ```text
 CAPTURE → PARK → RETURN → REVIEW LATER
 ```
@@ -71,9 +56,6 @@ CAPTURE → PARK → RETURN → REVIEW LATER
 The parking lot should be persistent and easy to review.
 
 ## Pattern 6: Duplicate suppression
-
-If the same task is captured multiple times:
-
 ```text
 new capture → compare → merge / discard duplicate → retain canonical task
 ```
@@ -81,9 +63,6 @@ new capture → compare → merge / discard duplicate → retain canonical task
 The goal is idempotent work, not perfect automated deduplication.
 
 ## Pattern 7: Missed-day recovery
-
-After a disrupted period:
-
 1. Open the capture inbox and task queue.
 2. Remove or archive stale items.
 3. Merge duplicates.
@@ -95,14 +74,6 @@ After a disrupted period:
 Do not turn backlog reconciliation into a requirement to complete everything that was missed.
 
 ## Pattern 8: Review debt
+A capture system that is never reviewed becomes storage without retrieval.
 
-A capture system that is never reviewed becomes another form of storage without retrieval.
-
-During review, each item should be:
-
-- actionable;
-- scheduled;
-- parked;
-- merged;
-- converted to reference;
-- or archived.
+During review, each item should be actionable, scheduled, parked, merged, converted to reference, or archived.
