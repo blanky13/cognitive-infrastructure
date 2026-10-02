@@ -34,4 +34,4 @@ Use the analogy to generate an engineering intervention:
 
 **failure mode → system pattern → practical behavior**
 
-Do not reverse the process and infer a cognitive mechanism merely because an infrastructure analogy sounds plausible.
+Do not infer a cognitive mechanism merely because an infrastructure analogy sounds plausible.
