@@ -34,7 +34,7 @@ flowchart TD
 | Idea parking lot | Hold non-active ideas | Separate reviewable list |
 | Active work | Current execution context | One primary workstream |
 | Context checkpoint | Preserve resumption state | Structured note |
-| Review | Reconcile queues and stale state | Daily/periodic review |
+| Review | Reconcile queues and stale state | Periodic review |
 | Archive | Remove completed or obsolete state | Archive / cold storage |
 
 ## State model
@@ -55,30 +55,25 @@ CLASSIFIED
 
 ## Context packet
 
-The context packet is the key reliability mechanism. It should answer:
+The context packet should answer:
 
 > “If I return to this later, what do I need to know to continue without reconstructing the whole task?”
 
-Keep it compact. The system should optimize for **cheap resumption**, not exhaustive documentation.
+Keep it compact. Optimize for **cheap resumption**, not exhaustive documentation.
 
 ## Reliability patterns
 
 ### Idempotency
-
-Repeated captures should not automatically create repeated work. During review, detect duplicates and merge them where appropriate.
+Repeated captures should not automatically create repeated work. Detect duplicates and merge them where appropriate.
 
 ### Rate limiting
-
-Notifications and incoming requests should be limited when they would repeatedly interrupt active work.
+Limit notifications and incoming requests when they repeatedly interrupt active work.
 
 ### Backpressure
-
-If the capture or review backlog grows beyond what can reasonably be processed, simplify the system and defer nonessential processing. Backlog itself should not become a new source of overload.
+If capture or review backlog grows beyond what can reasonably be processed, simplify the system and defer nonessential processing.
 
 ### Queue aging
-
-Parked items should be reviewed periodically. Old items can be clarified, scheduled, merged, or archived rather than remaining indefinitely active in the background.
+Review parked items periodically. Old items can be clarified, scheduled, merged, or archived.
 
 ### Checkpointing
-
 Checkpoint frequency should reflect interruption risk and task complexity. There is no universal timer that works for every task.
